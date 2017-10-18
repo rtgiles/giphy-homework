@@ -64,13 +64,13 @@ $(document).ready(function() {
 		        	//console.log(response.data);
 		        	//console.log(results);
 		          for (var i = 0; i < results.length; i++) {
-		            var gifDiv = $("<div class='item'>");
+		            var gifDiv = $("<div>");
 
 		            var rating = results[i].rating;
 
 		            var p = $("<p>").text("Rating: " + rating);
 
-		            var animalImage = $("<img>");
+		            var animalImage = $("<img class= 'item'>");
 		            animalImage.attr("src", results[i].images.fixed_height.url);
 		            animalImage.attr("data-state", "animate");
 		            animalImage.attr("data-still", results[i].images.fixed_height_still.url);
@@ -81,7 +81,7 @@ $(document).ready(function() {
 		            gifDiv.prepend(p);
 		            gifDiv.prepend(animalArray2[i]);
 
-		            $("#giphyAppearshere").prepend(gifDiv);
+		            $("#giphyAppearshere").prepend(/*p + <br> + animalArray2[i]*/gifDiv);
 		            }
 		        }) 
 		    $(document.body).on("click", ".item", function(event){
