@@ -1,10 +1,27 @@
-
+body {
+	width: 980px;
+}
 
 button {
-	margin-right: 10px;
+	margin: 10px 10px 10px 0px;
 	text-transform: capitalize;
 }
 
 form {
+	margin-left: 10px;
 	float: right;
 }
+
+ 
+.item{
+	float: left;
+	margin-right: 5px;
+	display: inline-block;
+}
+
+/* .items: {
+	float: right;
+	height: 100px;
+	width: 60px;
+	padding:2.5px;
+}  */

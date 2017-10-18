@@ -3,9 +3,9 @@ $(document).ready(function() {
 	//console.log(aninmalArray);
 	
 
-	function animalsName() {
-		var animalName = $(this).attr(data-name);
-	}
+	// function animalsName() {
+	// 	var animalName = $(this).attr(data-name);
+	// }
 
 	function createAnimalsbuttons(){
 		// Deleting the animals prior to adding new animal
@@ -47,8 +47,8 @@ $(document).ready(function() {
 	      });
 
 
-		$("#animalButtons").on("click", function(event){
-		var animal2 = $(this).attr(data-animal);
+		/*$("#animalButtons")*/$(document.body).on("click", ".animal", function(event){
+		var animal2 = $(this).attr("data-animal");
 
 		console.log(animal2);
 	      var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
