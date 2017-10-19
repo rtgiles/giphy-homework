@@ -1,6 +1,6 @@
 $(document).ready(function() {
-	var animalArray=["Lions","Leopards"];
-	var animalArray2=[];
+	var animalArray=["Lions","Leopards", "Kangaroo", "Panther", "Tasmanian Devil"];
+	var gifAnmlArry=[];
 	//console.log(aninmalArray);
 	
 
@@ -41,11 +41,11 @@ $(document).ready(function() {
 
 	        // Adding input to array
 	        animalArray.push(animal);
-	        console.log(aninmalArray);
+	        console.log(animalArray);
 	        // Calling createButtons which processes the animal array
 	        createAnimalsbuttons();
 
-	      });
+	    });
 
 
 		$(document.body).on("click", ".animal", function(event){
@@ -64,7 +64,7 @@ $(document).ready(function() {
 		        	//console.log(response.data);
 		        	//console.log(results);
 		          for (var i = 0; i < results.length; i++) {
-		            var gifDiv = $("<div>");
+		            var gifDiv = $("<div class='gif'>");
 
 		            var rating = results[i].rating;
 
@@ -75,13 +75,13 @@ $(document).ready(function() {
 		            animalImage.attr("data-state", "animate");
 		            animalImage.attr("data-still", results[i].images.fixed_height_still.url);
 		            animalImage.attr("data-animate", results[i].images.fixed_height.url);
-		            animalArray2.push(animalImage);
-		            console.log(animalArray2); 
+		            gifAnmlArry.push(animalImage);
+		            console.log(gifAnmlArry); 
 
 		            gifDiv.prepend(p);
-		            gifDiv.prepend(animalArray2[i]);
-
-		            $("#giphyAppearshere").prepend(/*p + <br> + animalArray2[i]*/gifDiv);
+		            gifDiv.prepend(gifAnmlArry[i]);
+					
+		            $("#giphyAppearshere").prepend(/*p + <br> + gifAnmlArry[i]*/gifDiv);
 		            }
 		        }) 
 		    $(document.body).on("click", ".item", function(event){

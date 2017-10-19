@@ -8,12 +8,13 @@ button {
 }
 
 form {
+	margin-bottom: ;
 	margin-left: 10px;
 	float: right;
 }
 
  
-.item{
+.gif{
 	float: left;
 	margin-right: 5px;
 	display: inline-block;
