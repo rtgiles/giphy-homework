@@ -50,7 +50,7 @@ $(document).ready(function() {
 
 		$(document.body).on("click", ".animal", function(event){
 			var animal2 = $(this).attr("data-animal");
-
+			var gifAnmlArry=[];
 			//console.log(animal);
 		    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
 		      animal2 + "&api_key=dc6zaTOxFJmzC&limit=10";
